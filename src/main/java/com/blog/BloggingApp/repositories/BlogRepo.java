@@ -10,4 +10,6 @@ import com.blog.BloggingApp.models.Blog;
 @Repository
 public interface BlogRepo extends MongoRepository<Blog, String> {
     List<Blog> findBlogByTitle(String title);
+    void deleteAllByUserId(String userId);
+    List<Blog> findAllByUserId(String userId);
 }

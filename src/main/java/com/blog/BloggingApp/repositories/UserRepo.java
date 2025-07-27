@@ -8,6 +8,7 @@ import com.blog.BloggingApp.models.User;
 
 @Repository
 public interface UserRepo extends MongoRepository<User, String> {
-    User findUserByUserName(String userName);
-    boolean existsByUserName(String userName);
+    User findUserByUsername(String Username);
+    boolean existsByUsername(String Username);
+    void deleteByUsername(String Username);
 }
